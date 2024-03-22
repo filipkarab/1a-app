@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/links_header"
+        android:layout_width="387dp"
+        android:layout_height="wrap_content"
+        android:text="Pridať odkazy"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.14999998" />
+
+    <View
+        android:id="@+id/links_header_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="15dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/links_header" />
+
+    <TextView
+        android:id="@+id/links_from_text"
+        android:layout_width="347dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Od"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/links_header_divider" />
+
+    <EditText
+        android:id="@+id/links_from_date_year"
+        android:layout_width="120dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:hint="yyyy"
+        android:inputType="date"
+        android:paddingStart="10dp"
+        android:paddingEnd="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/links_from_text" />
+
+    <EditText
+        android:id="@+id/links_from_date_month"
+        android:layout_width="60dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="10dp"
+        android:ems="10"
+        android:hint="MM"
+        android:inputType="date"
+        android:paddingStart="10dp"
+        android:paddingEnd="0dp"
+        app:layout_constraintStart_toEndOf="@+id/links_from_date_year"
+        app:layout_constraintTop_toBottomOf="@+id/links_from_text" />
+
+    <EditText
+        android:id="@+id/links_from_date_day"
+        android:layout_width="60dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="10dp"
+        android:ems="10"
+        android:hint="dd"
+        android:inputType="date"
+        android:paddingStart="10dp"
+        android:paddingEnd="0dp"
+        app:layout_constraintStart_toEndOf="@+id/links_from_date_month"
+        app:layout_constraintTop_toBottomOf="@+id/links_from_text" />
+
+    <View
+        android:id="@+id/links_from_divider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/links_from_date_year" />
+
+    <TextView
+        android:id="@+id/links_subject_text"
+        android:layout_width="347dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Predmet"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/links_from_divider" />
+
+    <TextView
+        android:id="@+id/links_subject_input"
+        android:layout_width="347dp"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="Klikni pre výber"
+        android:textAlignment="center"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/links_subject_text" />
+
+    <View
+        android:id="@+id/links_subject_divider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/links_subject_input" />
+
+    <TextView
+        android:id="@+id/links_message_text"
+        android:layout_width="347dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Správa"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/links_subject_divider" />
+
+    <EditText
+        android:id="@+id/links_message_input"
+        android:layout_width="347dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="Zadaj linky, každý na novom riadku"
+        android:inputType="textMultiLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/links_message_text" />
+
+    <View
+        android:id="@+id/links_message_divider"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/links_message_input" />
+
+    <Button
+        android:id="@+id/links_finish_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="Hotovo"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/links_message_divider" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
